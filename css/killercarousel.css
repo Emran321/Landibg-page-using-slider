@@ -1,0 +1,76 @@
+/*This wraps carousel items.*/
+.kc-item {
+    position:absolute;
+    /* These sizes are from the examples - change as appropriate */
+    width:188px;
+    height:250px;
+    visibility:hidden;
+}
+
+.kc-shadow-bottom {
+    position:absolute !important;
+    top:100% !important;
+    width:100% !important;
+    height:10% !important;
+    background-image:url(shadow-bottom.png);
+    left:0px !important;
+}
+.kc-shadow-left,.kc-shadow-right {
+    position:absolute !important;
+    top:0% !important;    
+    width:10% !important;
+    height:100% !important;
+    left:-10% !important;
+    background-image:url(shadow-left.png);
+}
+.kc-shadow-right {
+    left:100% !important;
+    background-image:url(shadow-right.png);
+}
+
+@-moz-document url-prefix() {
+    /* Fix for FireFox specific dark edge showing on shadows */
+    .kc-shadow-bottom,.kc-shadow-left,.kc-shadow-right {
+         outline: 1px solid transparent;
+    }
+    .kc-reflection {
+         outline: 1px solid transparent;
+    }
+}
+
+
+.kc-reflection {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:0px;
+}
+
+/* The wrapping element of navigation buttons (if used) */
+.kc-nav-wrap {
+    display:inline-block;
+    position:absolute;
+    z-index:1000;
+}
+/* Navigation button */
+.kc-nav-button, .kc-nav-button-active {
+    width:16px;
+    height:16px;
+    background-color: #888;
+    float:left;
+    margin-right:10px;
+    cursor: pointer;
+    border-radius: 16px;
+    border:1px solid rgba(0,0,0,0.5);
+}
+/* Navigation button active */
+.kc-nav-button.active {
+    background-color: #fff;
+}
+
+/* No margin on  last one. */
+.kc-nav-button.last {
+    margin-right:0;
+}
+
