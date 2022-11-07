@@ -1,2 +1,2 @@
-# Landibg-page-using-slider
+# Landing-page-using-slider
 # Psd to Html
